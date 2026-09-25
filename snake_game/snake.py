@@ -24,8 +24,7 @@ class Snake:
     def is_dead(self):
         if abs(self.head.xcor()) >= 300 or abs(self.head.ycor()) >= 300:
             return True
-        for i in range(1, len(self.segments) - 1, 1):
-            tail_part = self.segments[i]
+        for tail_part in self.segments[1:]:
             if self.head.position() == tail_part.position():
                 return True
         return False
