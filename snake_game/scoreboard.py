@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Scoreboard(Turtle):
     score = 0
 
@@ -9,11 +10,11 @@ class Scoreboard(Turtle):
         self.color("white")
         self.hideturtle()
         self.speed("fastest")
-        self.goto(0,300)
+        self.goto(0, 300)
         self.draw_score()
 
     def draw_score(self):
-        self.write(f"Score: {self.score}",False,"right", font=('Arial',12,'bold'))
+        self.write(f"Score: {self.score}", False, "right", font=("Arial", 12, "bold"))
 
     def inc_score(self):
         self.score += 1

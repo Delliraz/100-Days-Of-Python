@@ -1,13 +1,16 @@
-from turtle import Turtle,Screen
+from turtle import Turtle, Screen
 
 t = Turtle()
 screen = Screen()
 
+
 def move_forwards():
     t.forward(10)
 
+
 def move_backwards():
     t.backward(10)
+
 
 def move_left():
     t.left(10)
@@ -16,8 +19,10 @@ def move_left():
 def move_right():
     t.right(10)
 
+
 def clear():
     screen.reset()
+
 
 screen.listen()
 screen.onkey(key="w", fun=move_forwards)

@@ -28,7 +28,6 @@ account_b = random.choice(data)
 
 # Make the game repeatable.
 while game_should_continue:
-
     # Making account at position B become the next account at position A.
     account_a = account_b
     account_b = random.choice(data)
@@ -62,5 +61,3 @@ while game_should_continue:
     else:
         print(f"Sorry, that's wrong. Final score: {score}.")
         game_should_continue = False
-
-

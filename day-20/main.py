@@ -1,14 +1,14 @@
 from operator import truediv
-from turtle import Turtle,Screen
+from turtle import Turtle, Screen
 import time
 
 screen = Screen()
-screen.setup(width=600,height=600)
+screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake")
 screen.tracer(0)
 
-starting_positions = [(0,0),(-20,0),(-40,0)]
+starting_positions = [(0, 0), (-20, 0), (-40, 0)]
 
 segments = []
 
@@ -33,11 +33,6 @@ while game_is_on:
             seg.forward(20)
         else:
             seg.goto(seg1_pos)
-
-
-
-
-
 
 
 screen.exitonclick()

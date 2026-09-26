@@ -2,6 +2,7 @@ import time
 from random import choice
 from turtle import Turtle, Screen
 
+
 def draw_dash(l):
     count = 0
     while count < l:
@@ -10,6 +11,7 @@ def draw_dash(l):
         turtle.forward(5)
         turtle.pendown()
         count += 10
+
 
 turtle = Turtle()
 
@@ -21,13 +23,8 @@ for _ in range(4):
     turtle.left(90)
 
 
-
-
-
-
 screen = Screen()
 
-screen.screensize(1100,1100)
+screen.screensize(1100, 1100)
 
 screen.exitonclick()
-

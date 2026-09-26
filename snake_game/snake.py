@@ -1,7 +1,15 @@
 from turtle import Turtle
 from food import Food
 
-STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0), (-60, 0), (-80, 0), (-100, 0), (-120, 0)]
+STARTING_POSITIONS = [
+    (0, 0),
+    (-20, 0),
+    (-40, 0),
+    (-60, 0),
+    (-80, 0),
+    (-100, 0),
+    (-120, 0),
+]
 MOVE_DISTANCE = 20
 
 
@@ -19,8 +27,6 @@ class Snake:
             self.segments[i].goto(new_pos)
         self.head.forward(MOVE_DISTANCE)
 
-
-
     def is_dead(self):
         if abs(self.head.xcor()) >= 300 or abs(self.head.ycor()) >= 300:
             return True
@@ -33,7 +39,7 @@ class Snake:
         for position in STARTING_POSITIONS:
             self.draw_unit(position)
 
-    def draw_unit(self,position):
+    def draw_unit(self, position):
         new_segment = Turtle("square")
         new_segment.color("white")
         new_segment.penup()
@@ -74,5 +80,4 @@ class Snake:
             case 270:
                 ycor += MOVE_DISTANCE
 
-        self.draw_unit((xcor,ycor))
-
+        self.draw_unit((xcor, ycor))

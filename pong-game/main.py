@@ -1,4 +1,4 @@
-from turtle import Turtle,Screen
+from turtle import Turtle, Screen
 from platform import Plattform
 from ball import Ball
 
@@ -7,7 +7,7 @@ from scoreboard import Scoreboard
 import time
 
 screen = Screen()
-screen.setup(width=850,height=650)
+screen.setup(width=850, height=650)
 screen.bgcolor("black")
 screen.title("Pong")
 screen.tracer(0)
@@ -21,13 +21,13 @@ ball.move()
 
 t = Turtle()
 t.penup()
-t.goto(-400,-300)
+t.goto(-400, -300)
 t.pendown()
 t.color("white")
-t.goto(-400,300)
-t.goto(400,300)
-t.goto(400,-300)
-t.goto(-400,-300)
+t.goto(-400, 300)
+t.goto(400, 300)
+t.goto(400, -300)
+t.goto(-400, -300)
 
 
 screen.update()
@@ -41,7 +41,6 @@ screen.onkey(key="Up", fun=platform_right.go_up)
 screen.onkey(key="Down", fun=platform_right.go_down)
 
 
-
 game_is_on = True
 
 while game_is_on:
@@ -49,11 +48,8 @@ while game_is_on:
     ball.move()
     ball.detect_collision_with_wall()
     time.sleep(0.1)
-    if not ball.check_if_catched(platform_left,platform_right):
+    if not ball.check_if_catched(platform_left, platform_right):
         game_is_on = False
-
-
-
 
 
 screen.exitonclick()

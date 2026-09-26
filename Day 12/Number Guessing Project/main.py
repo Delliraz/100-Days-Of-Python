@@ -1,16 +1,16 @@
 import random
+
 print("Welcome to the number guessing game")
 print("I'm thinking of a numer between 1 and 100")
 
-number_to_guess = random.randint(1,100)
+number_to_guess = random.randint(1, 100)
 diff_choice = input("Choose a difficulty. Type easy/hard")
 attempts_left = 0
 
 if diff_choice == "easy":
     attempts_left = 10
 else:
-    attempts_left=5
-
+    attempts_left = 5
 
 
 while True:

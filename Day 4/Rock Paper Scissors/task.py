@@ -1,30 +1,31 @@
 import random
-rock = '''
+
+rock = """
     _______
 ---'   ____)
       (_____)
       (_____)
       (____)
 ---.__(___)
-'''
+"""
 
-paper = '''
+paper = """
     _______
 ---'   ____)____
           ______)
           _______)
          _______)
 ---.__________)
-'''
+"""
 
-scissors = '''
+scissors = """
     _______
 ---'   ____)____
           ______)
        __________)
       (____)
 ---.__(___)
-'''
+"""
 options = [rock, paper, scissors]
 human_choice = options[int(input("Put the rock 0, paper 1 , or scissors 2 in: "))]
 print("Your choice: \n" + human_choice)

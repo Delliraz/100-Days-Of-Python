@@ -1,4 +1,4 @@
-bmi = 84 / 1.65 ** 2
+bmi = 84 / 1.65**2
 
 # Original Float with decimal places
 print(bmi)
@@ -20,7 +20,7 @@ score = 0
 score += 1
 print(score)
 
-#Also
+# Also
 score -= 1
 score *= 2
 score /= 2
@@ -29,6 +29,6 @@ score = 0
 height = 1.8
 is_winning = True
 
-print(f"Your score is = {score}, your height is {height}. You are winning is {is_winning}")
-
-
+print(
+    f"Your score is = {score}, your height is {height}. You are winning is {is_winning}"
+)

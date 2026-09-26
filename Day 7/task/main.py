@@ -8,14 +8,15 @@ try_counter = 0
 max_attemps = 6
 
 placeholder = []
-for i in range(0,len(chosen_word)):
+for i in range(0, len(chosen_word)):
     placeholder.append("_")
 
 hangman_art.stages.reverse()
 
+
 def find_all_index(chosen_word, guess):
     index = []
-    for i in range (0,len(chosen_word)):
+    for i in range(0, len(chosen_word)):
         if chosen_word[i] == guess:
             index.append(i)
     return index
@@ -27,7 +28,7 @@ while try_counter < max_attemps or "_" in placeholder:
     for letter in chosen_word:
         if letter == guess:
             print("Right")
-            all_index = find_all_index(chosen_word,guess)
+            all_index = find_all_index(chosen_word, guess)
             for i in all_index:
                 placeholder[i] = guess
             continue

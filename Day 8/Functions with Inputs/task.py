@@ -13,6 +13,6 @@ def find_indicies(arr, letter):
     indicies = []
     i = 0
     for a in arr:
-        if (a == letter):
+        if a == letter:
             indicies.append(i)
         i += 1

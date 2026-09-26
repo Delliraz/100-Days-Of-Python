@@ -1,4 +1,31 @@
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+]
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
 text = input("Type your message:\n").lower()
@@ -11,6 +38,7 @@ shift = int(input("Type the shift number:\n"))
 # TODO-3: Combine the 'encrypt()' and 'decrypt()' functions into one function called 'caesar()'.
 #  Use the value of the user chosen 'direction' variable to determine which functionality to use.
 
+
 def decrypt(original_text, shift_amount):
     cipher_text = ""
     for letter in original_text:
@@ -18,6 +46,7 @@ def decrypt(original_text, shift_amount):
         shifted_position %= len(alphabet)
         cipher_text += alphabet[shifted_position]
     print(f"Here is the decoded result: {cipher_text}")
+
 
 def encrypt(original_text, shift_amount):
     cipher_text = ""
@@ -30,10 +59,9 @@ def encrypt(original_text, shift_amount):
 
 def caeser():
     if direction == "encode":
-        encrypt(text,shift)
+        encrypt(text, shift)
     elif direction == "decode":
-        decrypt(text,shift)
-
+        decrypt(text, shift)
 
 
 caeser()

@@ -1,5 +1,5 @@
 from operator import truediv
-from turtle import Turtle,Screen
+from turtle import Turtle, Screen
 
 import scoreboard
 from snake import Snake
@@ -8,7 +8,7 @@ from scoreboard import Scoreboard
 import time
 
 screen = Screen()
-screen.setup(width=600,height=650)
+screen.setup(width=600, height=650)
 screen.bgcolor("black")
 screen.title("Snake")
 screen.tracer(0)
@@ -16,8 +16,6 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 score = Scoreboard()
-
-
 
 
 screen.update()
@@ -42,8 +40,6 @@ while game_is_on:
     if snake.is_dead():
         print("You have lost")
         break
-
-
 
 
 screen.exitonclick()

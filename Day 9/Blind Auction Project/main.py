@@ -8,7 +8,7 @@ dict = {}
 while True:
     name = input("What is your name?")
     price = int(input("What is your price?"))
-    dict[name]=price
+    dict[name] = price
     is_over = input("Are there other bids? yes/no")
     if is_over == "no":
         break
@@ -18,7 +18,7 @@ max_bid = 0
 max_bid_name = ""
 for key in dict:
     if dict[key] > max_bid:
-        max_bid= dict[key]
+        max_bid = dict[key]
         max_bid_name = key
 
 print(f"Aaaand the winner is {max_bid_name}")
